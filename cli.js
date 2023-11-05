@@ -19,6 +19,7 @@ program
             }
         )
     })
+
 program
     .command("clear")
     .description("clear all tasks")
@@ -32,9 +33,10 @@ program
             }
         )
     })
+
 program
     .command("remove")
-    .description("remove this file")
+    .description("remove record file")
     .action(() => db.remove().then(() => console.log("删除成功！").catch(e => console.error(e))))
 
 
@@ -42,6 +44,7 @@ program
     .command("read")
     .description("read this file")
     .action(() => db.read().then(res => console.log("读取成功!", res)))
+
 
 program.parse(process.argv)
 
