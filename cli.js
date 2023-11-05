@@ -36,7 +36,7 @@ program
     .command("remove")
     .description("remove this file")
     .action(() => db.remove().then(() => console.log("删除成功！").catch(e => console.error(e))))
-    
+
 
 program
     .command("read")
@@ -45,7 +45,7 @@ program
 
 program.parse(process.argv)
 
-if (process.argv.length === 2) {
+if (process.argv.length === 2) {  //argv就是看启动命令传了哪些参数
     // 说明用户直接运行 node cli.js
-    void api.showAll()
+    void api.showAll()  //void 只是为了消除报错（警告），因为showAll是异步的，没写.then / await会警告
 }
