@@ -8,6 +8,7 @@ yarn global add node-todo-zlh
 
 ```
 
+
 # Usage
 
 ```
@@ -19,7 +20,7 @@ td -h
 ```
 
 
-# Local usage
+# The usage of the script file is as follows:
 ```
 node cli
 node cli add
