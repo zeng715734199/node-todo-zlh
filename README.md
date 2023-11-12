@@ -1,4 +1,4 @@
-# node-todo-zlh
+# Description
 This is a node todo tool that I developed myself, serving a similar purpose to a memo or a reminder.
 
 # Install
