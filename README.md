@@ -5,18 +5,18 @@ This is a node todo tool that I developed myself, serving a similar purpose to a
 
 ```
 yarn global add node-todo-zlh
+
+```
+
+# Usage
+
+```
 td 
 td add <message>
 td read
 td remove
 td -h
 ```
-
-# Usage
-
-```
-td
-
 
 
 # Local usage
