@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const program = require("commander")
 const api = require("./index.js")
 const pkg = require("./package.json")
@@ -37,18 +38,22 @@ program
 program
     .command("remove")
     .description("remove record file")
-    .action(() => db.remove().then(() => console.log("删除成功！").catch(e => console.error(e))))
-
+    .action(() =>
+        db.remove().then(
+            (e) => console.log(e),
+            e => console.error(e)
+        )
+    )
 
 program
     .command("read")
     .description("read this file")
     .action(() => db.read().then(res => console.log("读取成功!", res)))
 
-
 program.parse(process.argv)
 
-if (process.argv.length === 2) {  //argv就是看启动命令传了哪些参数
+if (process.argv.length === 2) {
+    //argv就是看启动命令传了哪些参数
     // 说明用户直接运行 node cli.js
-    void api.showAll()  //void 只是为了消除报错（警告），因为showAll是异步的，没写.then / await会警告
+    void api.showAll() //void 只是为了消除报错（警告），因为showAll是异步的，没写.then / await会警告
 }

@@ -1,10 +1,10 @@
 {
-  "name": "node-todo-2",
-  "version": "0.0.3",
+  "name": "node-todo-zlh",
+  "version": "0.0.2",
   "main": "index.js",
   "license": "MIT",
   "bin": {
-    "t": "cli.js"
+    "td": "cli.js"
   },
   "files": [
     "*.js"

@@ -31,10 +31,14 @@ const db = {
     },
     remove(path = dbPath) {
         return new Promise((resolve, reject) => {
-            fs.unlink(path, err => {
-                if (err) return reject(err)
-                resolve()
-            })
+            //查看路径下的文件是否存在
+            if (fs.existsSync(path)) {
+                //存在的话删除该文件
+                fs.unlink(path, err => {
+                    if (err) return reject(err)
+                    resolve("删除成功~")
+                })
+            }else resolve(".todo文件已不存在~")
         })
     },
 }
