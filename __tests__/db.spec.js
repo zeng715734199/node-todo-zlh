@@ -4,6 +4,10 @@ const fs = require('fs')
 jest.mock('fs')
 
 describe('db', () => {
+  //afterEach就是每次执行完it函数之后再执行其中的回调函数, 不然每次都要在it里面写一遍fs.clearMocks()很麻烦
+  afterEach(() => {
+    fs.clearMocks()
+  })
   it("can read", async () => {
     const data = [{data:'xxx', name:'handsomeBoy'}]
     //设置mock数据，模拟本地文件
