@@ -31,7 +31,7 @@ fs.writeFile = (path, data, callback) => {
   } else fs.writeFile(path, data, callback)
 }
 
-//情况Mocks数据，每次执行完测试用例记得清除一下测试数据，不然会干扰下一次测试的结果，学会清空是一个好习惯
+//清空Mocks数据，每次执行完测试用例记得清除一下测试数据，不然会干扰下一次测试的结果，学会清空是一个好习惯
 fs.clearMocks = () => {
   readMocks = {}
   writeMocks = {}
